@@ -10,12 +10,11 @@ public class Company {
     public void inputEmployeeData(int amount) {
         for (int i=0; i<amount; i++) {
             System.out.println();
+            System.out.println("Employee No " + (i+1));
             System.out.print("Name: ");
             String name = sc.nextLine().trim();
-            System.out.println();
             System.out.print("Position: ");
             String position = sc.nextLine().trim();
-            System.out.println();
             System.out.print("Salary: ");
             int salary = sc.nextInt();
             sc.nextLine();
@@ -27,6 +26,7 @@ public class Company {
         inputEmployeeData(amount);
         if (initDir(file)) {
             System.out.println("Directory is created");
+            System.out.println();
         }
         try{
             saveEmployeeData(file, employeeList);
